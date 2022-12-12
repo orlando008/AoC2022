@@ -103,7 +103,7 @@ namespace Day10
             {
                 for (int j = 0; j < 40; j++)
                 {
-                    crtScreen[i, j] = ".";
+                    crtScreen[i, j] = " ";
                 }   
             }
 
@@ -129,7 +129,7 @@ namespace Day10
 
                 if(currentX == crtColumn || currentX == crtColumn - 1 || currentX == crtColumn + 1)
                 {
-                    crtScreen[crtRow, crtColumn] = "#";
+                    crtScreen[crtRow, crtColumn] = "█";
                 }
                 
 
@@ -143,8 +143,8 @@ namespace Day10
                     Console.WriteLine();
                 }
 
-                Console.WriteLine("-------------------------------------------------");
-
+                Console.WriteLine();
+                Console.WriteLine();
                 currentSignal.CyclesActedUponThisCommand += 1;
 
                 if (currentSignal.CommandText == "addx")
@@ -156,18 +156,6 @@ namespace Day10
                 }
 
                 currentCycle += 1;
-            }
-
-            Console.WriteLine("-------------------------------------------------");
-
-            for (int i = 0; i < 6; i++)
-            {
-                for (int j = 0; j < 40; j++)
-                {
-                    Console.Write(crtScreen[i, j]);
-                }
-
-                Console.WriteLine();
             }
 
         }
