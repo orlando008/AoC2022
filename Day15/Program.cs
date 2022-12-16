@@ -104,11 +104,11 @@ namespace Day15
                 {
                     isMerged = false;
 
-                    //if the point at the leftmost/topmost is less than or equal to the rightmost/topmost
-                    //and the point at the leftmost/bottommost is greater than or equal to the rightmost/topmost
+                    //if the point at the 1st X min is less than or equal to the 2nd X min
+                    //and the point at the 1st X max is greater than or equal to the 2nd X max
                     if (bounds[0][0] <= bounds[1][0] && bounds[0][1] >= bounds[1][0])
                     {
-                        //set rightmost/bottommost equal to the what's more, the rightmost/topmost, or the rightmost/bottommost
+                        //move data 
                         bounds[0][1] = Math.Max(bounds[0][1], bounds[1][1]);
 
                         //remove the current point from consideration
